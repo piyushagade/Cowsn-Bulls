@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aaaaaa" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <RelativeLayout
+            android:id="@+id/rl_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/d_3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/d_2"
+                android:background="@drawable/bg"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="#111"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/d_2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/d_1"
+                android:background="@drawable/bg"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="#111"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/d_1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/bg"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="#111"
+                android:textSize="30sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/d_4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/d_3"
+                android:background="@drawable/bg"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:textColor="#111"
+                android:textSize="30sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/b_done"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_input"
+            android:layout_centerHorizontal="true"
+            android:text="Done" />
+
+        <RelativeLayout
+            android:id="@+id/rl_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/b_done"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/tv_bulls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="Input numbers to begin."
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/sv_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_result"
+            android:layout_above="@+id/rl_footerIcons"
+            android:layout_marginRight="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/ll_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_footerIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right" >
+
+            <ImageButton
+                android:id="@+id/i_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_marginRight="34dp"
+                android:background="@drawable/reload" />
+
+            <ImageButton
+                android:id="@+id/i_scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_toLeftOf="@+id/i_reload"
+                android:background="@drawable/scores" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
